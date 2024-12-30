@@ -1,6 +1,10 @@
-*{
-  padding: 0;
+
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root{
@@ -12,6 +16,13 @@
   --lt-gray: #E8E9EB;
   --dk-gray: #CCCDC6;
   --dkt-gray: #ACADA8;
+
+
+  /* === my font families === */
+  --font-body: 'Open Sans',  sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+
+  --fwb: 700;
 }
 
 
@@ -35,10 +46,83 @@
 .bkg-dk-gray{background-color: var(--dk-gray);}
 .bkg-dkt-gray{background-color: var(--dkt-gray);}
 
+.fh{font-family: var(--font-heading);}
+.fb{font-family: var(--font-body);}
+
+.fwb{font-weight: var(--fwb);}
+
 body,html{
   background-color: var(--white);
-  font-family: 'Open Sans', monospace,sans-serif; /* =fontfamilies are = Playfair Display, Open Sans, Nunito Lora*/
+  font-family: 'Open Sans', monospace sans-serif; 
   line-height: 1.5;
   box-sizing: border-box;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   text-rendering: optimizeLegibility;
 }
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem); 
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem); 
+}
+
+small {
+  font-size: clamp(0.75rem, 1.5vw, 1rem); 
+}
+
+
+.flex { display: flex; }
+.flex-center { justify-content: center; align-items: center; }
+.align-center{align-items: center;}
+.flex-column { flex-direction: column; }
+.justify-content{ justify-content: space-between;}
+
+button{
+  padding: .6em 2em; 
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+nav{
+  padding-inline: .5em .7em;
+  font-family: 'Nunito';
+  box-shadow:  5px 5px  5px var(--dkt-gray);
+}
+
+nav ul{
+  list-style: none;
+  align-items: start;
+  align-items: center;
+}
+
+nav ul li{
+  margin-inline: .5em;
+}
+
+nav ul li a{
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: .5em 1em;
+  color: var(--dkt-gray);
+  font-size: clamp(1rem, 1.5vw, 1.5rem); 
+  transition: all 200ms ease-in;
+}
+
+nav ul li a:hover{
+  color: var(--white);
+}
+
+
+
+.sign-up-btn:hover{
+background-color: var(--cyan);
+color: white;
+border: 1px solid var(--white);
+transform: scale(1.000000001);
+}
+
