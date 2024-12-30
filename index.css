@@ -1,0 +1,44 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --dkt-blue:#022840;
+  --dk-blue: #025373;
+  --dk-cyan:  #025E73;
+  --cyan:  #037F8C;
+  --white: #F2F2F2;
+  --lt-gray: #E8E9EB;
+  --dk-gray: #CCCDC6;
+  --dkt-gray: #ACADA8;
+}
+
+
+/*==== THESE ARE MY COLORS ====*/
+.clr-dkt-blue{color: var(--dkt-blue);}
+.clr-dk-blue{color: var(--dk-blue);}
+.clr-dk-cyan{color: var(--dk-cyan);}
+.clr-cyan{color: var(--cyan);}
+.clr-white{color: var(--white);}
+.clr-lt-gray{color: var(--lt-gray);}
+.clr-dk-gray{color: var(--dk-gray);}
+.clr-dkt-gray{color: var(--dkt-gray);}
+
+/* ==== THESE ARE MY BACKGROUND COLORS ==== */
+.bkg-dkt-blue{background-color: var(--dkt-blue);}  /*lt stands for "light"*/
+.bkg-dk-blue{background-color: var(--dk-blue);}    /*dk stands for "dark"*/
+.bkg-dk-cyan{background-color: var(--dk-cyan);}     /*dkt stands for "darkest"*/
+.bkg-cyan{background-color: var(--cyan);}
+.bkg-white{background-color: var(--white);}
+.bkg-lt-gray{background-color: var(--lt-gray);}
+.bkg-dk-gray{background-color: var(--dk-gray);}
+.bkg-dkt-gray{background-color: var(--dkt-gray);}
+
+body,html{
+  background-color: var(--white);
+  font-family: 'Open Sans', monospace,sans-serif; /* =fontfamilies are = Playfair Display, Open Sans, Nunito Lora*/
+  line-height: 1.5;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
