@@ -48,7 +48,6 @@
 
 .fh{font-family: var(--font-heading);}
 .fb{font-family: var(--font-body);}
-
 .fwb{font-weight: var(--fwb);}
 
 body,html{
@@ -58,10 +57,17 @@ body,html{
   box-sizing: border-box;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   text-rendering: optimizeLegibility;
+  min-height: 100svh;
 }
 
 h1 {
+  background: linear-gradient(45deg, var(--dkt-blue), var(--dk-cyan), var(--cyan)); /* Gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* For non-Webkit browsers */
+  color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
   font-size: clamp(2rem, 5vw, 3.5rem); 
+  font-family: var(--font-heading);
 }
 
 p {
@@ -69,7 +75,9 @@ p {
 }
 
 small {
-  font-size: clamp(0.75rem, 1.5vw, 1rem); 
+  color: var(--dkt-gray);
+  font-size: clamp(1rem, 1.5vw, 1.5rem); 
+  letter-spacing: 2px;
 }
 
 
@@ -85,6 +93,18 @@ button{
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 250ms ease-in-out;
+  font-weight: 700;
+}
+
+button:active,
+button:focus{
+  opacity: .7;
+}
+
+image{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 nav{
@@ -95,7 +115,7 @@ nav{
 
 nav ul{
   list-style: none;
-  align-items: start;
+
   align-items: center;
 }
 
@@ -105,7 +125,7 @@ nav ul li{
 
 nav ul li a{
   text-decoration: none;
-  display: block;
+  display: flex;
   text-align: center;
   padding: .5em 1em;
   color: var(--dkt-gray);
@@ -117,8 +137,6 @@ nav ul li a:hover{
   color: var(--white);
 }
 
-
-
 .sign-up-btn:hover{
 background-color: var(--cyan);
 color: white;
@@ -126,3 +144,62 @@ border: 1px solid var(--white);
 transform: scale(1.000000001);
 }
 
+/*  */
+.wattsapp-us-logo{
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  right: 2em;
+  bottom: 5em;
+  cursor: pointer;
+}
+
+/*  */
+
+.master-con{
+  height: 90svh;
+  display: grid;
+  place-items: center;
+}
+
+.container{
+  width: 95%;
+  margin-inline: auto;
+}
+
+.main{
+  width: 60%;
+  line-height: 1.2;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.web-name{
+  display: block;
+}
+
+.my-into-text{
+  font-size: clamp(1rem, 2.5vw, 1.25rem); 
+   
+}
+
+.landing-pg-img-box{
+  width: 40%;
+  border-radius: 1rem;
+}
+
+.lp-btn-box{
+  text-align: center;
+  padding: .5em;
+}
+
+.get-started-btn{
+  background: linear-gradient(135deg, var(--dkt-blue), var(--dk-cyan), var(--cyan));
+ color: white;
+}
+
+.get-started-btn:hover {
+  background: linear-gradient(135deg, var(--dk-cyan), var(--cyan), var(--dkt-blue)); /* Slightly reversed gradient on hover */
+  transform: scale(1.05); /* Slight scale-up effect on hover */
+  border: 1px solid var(--dkt-blue); /* White border on hover */
+}
